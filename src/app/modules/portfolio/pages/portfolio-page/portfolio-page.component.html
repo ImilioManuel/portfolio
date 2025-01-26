@@ -1,0 +1,46 @@
+<main>
+    <section class="hero-page">
+        <app-header></app-header>
+        <div class="container">
+            <div class="hero-info">
+                <h1>Bem-vindo ao meu Perfil Online!</h1>
+                <h2 [class.fade-out]="fadeOut" [class.fade-in]="!fadeOut">{{ heroSubtitle }}</h2>
+                <p>Com paixão por tecnologia e inovação, crio aplicações web e sistemas robustos que conectam ideias ao
+                    mundo real.
+                    De interfaces elegantes a arquiteturas de software otimizadas, minha missão é transformar desafios
+                    em oportunidades digitais.</p>
+                <app-primary-btn [btn_content]="btn_content_hero"></app-primary-btn>
+            </div>
+            <div class="hero-img">
+                <img src="modules/portfolio/hero-page/hero-img.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <img src="modules/portfolio/about/about.svg" alt="">
+            <div class="about-info">
+                <h1>Sobre mim</h1>
+                <h3>Ola! Eu sou <span>Imílio Manuel</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatem explicabo ducimus
+                    repellendus
+                    doloribus, assumenda sapiente nisi dicta eos eius, sint id dolore recusandae adipisci quis?
+                    Blanditiis
+                    <br><br>
+                    eos placeat laudantium?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae, quisquam tempora
+                    sequi sed incidunt doloribus nesciunt nemo non excepturi perspiciatis ratione nobis impedit, a
+                    accusantium, voluptatum vitae enim minus?
+                </p>
+                <app-primary-btn [btn_content]="btn_content_about"></app-primary-btn>
+            </div>
+        </div>
+    </section>
+    <section class="service">
+        <h1>Frameworks & Linguagens de Programação</h1>
+        <div class="line"></div>
+        <div class="cards">
+            <app-card></app-card>
+        </div>        
+    </section>
+</main>
