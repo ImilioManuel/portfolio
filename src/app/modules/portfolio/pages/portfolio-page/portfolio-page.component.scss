@@ -1,13 +1,12 @@
 main {
     .hero-page {
-        background-image:  url('/modules/portfolio/hero-page/bg.jpg');
+        background-image: url('/modules/portfolio/hero-page/bg.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh;
 
         .container {
-
             padding: 0 6.4rem;
             display: flex;
             justify-content: space-between;
@@ -120,85 +119,18 @@ main {
             margin: 0 auto;
         }
 
-        
+
     }
 
-    @media (max-width: 1024px) {
-        .hero-page {
-            .container {
-                margin-top: 2.4rem;
-                align-items: flex-start;
-
-                .hero-info {
-                    h1 {
+    @media(width:1280px) {
+        .hero-page{
+            .container{
+                margin-top: 0;
+                .hero-info{
+                    h2{
                         font-size: 2.8rem;
                     }
-
-                    h2 {
-                        font-size: 1.8rem;
-                    }
-
-                    p {
-                        font-size: 1.2rem;
-                        font-weight: 300;
-                        line-height: 170%;
-                    }
                 }
-
-                .hero-img {
-                    padding: 0;
-                    width: 50%;
-
-                    img {
-                        width: 90%;
-                    }
-                }
-            }
-        }
-
-        .about {
-            .container {
-                align-items: flex-start;
-
-                img {
-                    width: 40%;
-                }
-
-                .about-info {
-                    width: 50%;
-
-                    h1 {
-                        font-size: 2.8rem;
-                    }
-
-                    h3 {
-                        font-size: 1.8rem;
-                    }
-
-                    p {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-
-        .service {
-            h1 {
-                padding-top: 1.8rem;
-                font-size: 2.4rem;
-                line-height: 170%;
-            }
-
-            .container {
-                padding: 3.2rem 3.2rem 1.6rem 3.2rem;
-
-                .cards {
-                    gap: 1.2rem;
-                }
-            }
-
-            .service-open-sources {
-                border: 1px solid red;
             }
         }
     }
