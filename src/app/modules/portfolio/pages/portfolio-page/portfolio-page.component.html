@@ -1,314 +1,396 @@
-<main class="h-screen">
+<main class="min-h-screen bg-[#0a0a0a] font-jetbrains-mono">
+    <div class="fixed inset-0 bg-grid-pattern opacity-10"></div>
+    <div class="fixed inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
+
     <app-header></app-header>
-    <section class="h-screen flex items-center justify-center px-4 md:px-20 ">
-        <div class=" flex flex-col md:flex-row items-center">
-            <!-- Texto -->
-            <div class=" md:w-1/2 flex flex-col items-start gap-2 pt-20">
-                <span class="text-white font-medium text-lg">👋 Olá, eu sou</span>
-                <h1 class="text-4xl md:text-6xl font-bold text-white">
-                    Imílio Manuel
-                </h1>
-                <h2 class="text-2xl md:text-4xl font-bold text-gray-400">
-                    Desenvolvedor Full Stack
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center px-4 md:px-20 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,#0a0a0a_100%)]"></div>
+        <div class="relative max-w-4xl text-center z-10">
+            <div class="text-cyan-400 font-mono mb-4">&lt;developer/&gt;</div>
+            <h1 class="cyberpunk-text text-5xl md:text-7xl font-bold mt-4 mb-6 text-white">
+                Imílio Manuel
+                <span class="block text-2xl mt-2 text-cyan-400">Full Stack Developer</span>
+            </h1>
+            <p class="text-xl text-cyan-200 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                <span class="text-pink-400">// Desenvolvedor Full Stack com expertise em Java & Angular,
+                    Com vontade de arquitetar soluções digitais inovadoras</span>
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="#projects"
+                    class="cyber-button px-8 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 rounded hover:bg-cyan-500/30 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)]"
+                    (click)="scrollToProjects()">
+                    <span class="text-sm mr-2">&lt;</span>
+                    Projectos
+                    <span class="text-sm ml-2">/&gt;</span>
+                </a>
+                <a href="mailto:imiliomanuel&#64;outlook.pt"
+                    class="cyber-button px-8 py-3 bg-pink-500/20 text-pink-400 border border-pink-500/50 rounded hover:bg-pink-500/30 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(236,72,153,0.5)]">
+                    <span class="text-sm mr-2"></span>
+                    Contacto
+                    <span class="text-sm ml-2"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="matrix-bg"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-8 px-4 md:px-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="tech-title mb-16 text-center">
+                <h2 class="text-3xl font-bold text-white">
+                    <span class="text-cyan-400">&lt;</span>
+                    Sobre Mim
+                    <span class="text-cyan-400">/&gt;</span>
                 </h2>
-                <p class="text-gray-400 text-base md:text-lg">
-                    Desenvolvedor apaixonado por criar soluções inovadoras e experiências digitais incríveis. Especializado em desenvolvimento web full stack com foco em tecnologias modernas.
-                </p>
-
-                <!-- Stats -->
-                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 my-4">
-                    <div class="flex flex-col items-center p-4 bg-white/5 rounded-lg">
-                        <span class="text-2xl font-bold text-[#FA3C00]">5+</span>
-                        <span class="text-sm text-white">Anos de Experiência</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 bg-white/5 rounded-lg">
-                        <span class="text-2xl font-bold text-white">2+</span>
-                        <span class="text-sm text-white">Projetos Concluídos</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 bg-white/5 rounded-lg">
-                        <span class="text-2xl font-bold text-[#DC66BE]">5+</span>
-                        <span class="text-sm text-white">Clientes Satisfeitos</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 bg-white/5 rounded-lg">
-                        <span class="text-2xl font-bold text-[#5275C9]">5+</span>
-                        <span class="text-sm text-white">Tecnologias Dominadas</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16">
+                <div
+                    class="tech-card p-8 rounded-lg bg-gradient-to-br from-cyan-950/50 to-purple-950/50 backdrop-blur-xl border border-cyan-500/20">
+                    <h3 class="text-xl font-bold mb-4 text-cyan-400 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Localização
+                    </h3>
+                    <div class="space-y-2 text-cyan-200 font-light">
+                        <p class="flex items-center">
+                            <span class="text-pink-400 mr-2">$</span>
+                            Golf 2, Kilamba kiaxe, Luanda, Angola
+                        </p>
+                        <p class="flex items-center">
+                            <span class="text-pink-400 mr-2">$</span>
+                            (+244) 944 916 156
+                        </p>
+                        <p class="flex items-center">
+                            <span class="text-pink-400 mr-2">$</span>
+                            imiliomanuel&#64;outlook.pt
+                        </p>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-4">
-                    <a 
-                        href="#contato"
-                        class="px-6 py-3 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium transition-all"
-                    >
-                        Entre em contato
-                    </a>
-                    <a 
-                        href="#projetos"
-                        class="px-6 py-3 rounded-lg bg-white/5 hover:bg-white/10 text-white font-medium transition-all"
-                    >
-                        Ver projetos
-                    </a>
-                </div>
-
-                <!-- Social Links -->
-                <div class="flex items-center gap-4 mt-4">
-                    <a 
-                        href="https://github.com/seu-usuario"
-                        target="_blank"
-                        class="text-gray-400 hover:text-primary-500 transition-all"
-                    >
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a 
-                        href="https://linkedin.com/in/seu-usuario"
-                        target="_blank"
-                        class="text-gray-400 hover:text-primary-500 transition-all"
-                    >
-                        <i class="fab fa-linkedin text-2xl"></i>
-                    </a>
+                <div
+                    class="tech-card p-8 rounded-lg bg-gradient-to-br from-pink-950/50 to-purple-950/50 backdrop-blur-xl border border-pink-500/20">
+                    <h3 class="text-xl font-bold mb-4 text-pink-400 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        Formação
+                    </h3>
+                    <div class="space-y-2 text-pink-200 font-light">
+                        <p class="flex items-center">
+                            <span class="text-cyan-400 mr-2">&gt;</span>
+                            Bacharel em Engenharia Informática
+                        </p>
+                        <p class="flex items-center">
+                            <span class="text-cyan-400 mr-2">&gt;</span>
+                            ISPTEC
+                        </p>
+                        <p class="flex items-center">
+                            <span class="text-cyan-400 mr-2">&gt;</span>
+                            2020
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Seção Sobre -->
-    <section id="sobre" class="px-6 md:px-20 bg-black">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col items-center">
-                <!-- Conteúdo -->
-                <div class="w-full md:w-1/2">
-                    <span class="text-white font-medium">👋 Sobre mim</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">
-                        Desenvolvedor especializado em Java e Angular
-                    </h2>
-                    <p class="text-gray-400 mt-4">
-                        Olá! Sou um desenvolvedor full-stack com foco em Java/Spring Boot e Angular. 
-                        Tenho experiência sólida no desenvolvimento de aplicações empresariais robustas e escaláveis.
+
+    <!-- Experience Section -->
+    <section id="experience" class="relative py-8 px-4 md:px-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="tech-title mb-16 text-center">
+                <h2 class="text-3xl font-bold text-white">
+                    <span class="text-pink-400"></span>
+                    Experiência
+                    <span class="text-pink-400"></span>
+                </h2>
+            </div>
+            <div class="space-y-16">
+                <!-- Zanecom -->
+                <div
+                    class="tech-card p-8 rounded-lg bg-gradient-to-br from-cyan-950/50 to-purple-950/50 backdrop-blur-xl border border-cyan-500/20">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-cyan-400">Desenvolvedor Fullstack / Administrador de Sistemas
+                        </h3>
+                        <span class="text-pink-400 font-mono">2024 - Presente</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-cyan-300 mb-2 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Zanecom
+                    </h4>
+                    <ul class="space-y-2 text-cyan-200 font-light">
+                        <li class="flex items-center">
+                            <span class="text-pink-400 mr-2">&gt;</span>
+                            Desenvolvimento de APIs RESTful para envio de e-mails com integração SMTP
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-pink-400 mr-2">&gt;</span>
+                            Administração e manutenção de servidores Linux
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-pink-400 mr-2">&gt;</span>
+                            Implementação de soluções open source para monitoramento
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-pink-400 mr-2">&gt;</span>
+                            Gerenciamento de bancos de dados MySQL e PostgreSQL
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-pink-400 mr-2">&gt;</span>
+                            Implementação de autenticação e autorização com Spring Security e JWT
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Projeto Pessoal -->
+                <div
+                    class="tech-card p-8 rounded-lg bg-gradient-to-br from-pink-950/50 to-purple-950/50 backdrop-blur-xl border border-pink-500/20">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-pink-400">Sistema de Gestão de Provas Online</h3>
+                        <span class="text-cyan-400 font-mono">2024 - Presente</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-pink-300 mb-2 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Projeto Pessoal
+                    </h4>
+                    <ul class="space-y-2 text-pink-200 font-light">
+                        <li class="flex items-center">
+                            <span class="text-cyan-400 mr-2">&gt;</span>
+                            Backend em Java com Spring Boot
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cyan-400 mr-2">&gt;</span>
+                            Frontend responsivo em Angular
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cyan-400 mr-2">&gt;</span>
+                            Autenticação de usuários
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cyan-400 mr-2">&gt;</span>
+                            Banco de dados MySQL
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cyan-400 mr-2">&gt;</span>
+                            Sistema de validação de respostas
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-8 px-4 md:px-20 bg-black/30 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 text-center text-white">Habilidades</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-4 text-fuchsia-400">Backend</h3>
+                    <ul class="space-y-2 text-fuchsia-200">
+                        <li>Java</li>
+                        <li>Framework Spring</li>
+                        <li>JUnit/Mockito</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-4 text-cyan-400">Frontend</h3>
+                    <ul class="space-y-2 text-cyan-200">
+                        <li>Angular</li>
+                        <li>HTML/CSS</li>
+                        <li>TypeScript</li>
+                        <li>Tailwind CSS</li>
+                        <li>RxJS</li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-4 text-fuchsia-400">Banco de Dados</h3>
+                    <ul class="space-y-2 text-fuchsia-200">
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>H2</li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-4 text-cyan-400">DevOps</h3>
+                    <ul class="space-y-2 text-cyan-200">
+                        <li>Docker</li>
+                        <li>AWS</li>
+                        <li>Linux</li>
+                        <li>Git</li>
+                        <li>Zabbix</li>
+                        <li>Grafana</li>
+                        <li>OTRS</li>
+                        <li>Prometheus</li>
+                        <li>Grafana</li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="relative py-8 px-4 md:px-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="tech-title mb-16 text-center">
+                <h2 class="text-3xl font-bold text-white">
+                    <span class="text-cyan-400">&lt;</span>
+                    Projetos
+                    <span class="text-cyan-400">/&gt;</span>
+                </h2>
+            </div>
+            <div class="space-y-24">
+                <!-- Project 1 -->
+                <div
+                    class="tech-card p-8 rounded-lg bg-gradient-to-br from-cyan-950/50 to-purple-950/50 backdrop-blur-xl border border-cyan-500/20">
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Sistema de Gestão de Lavandaria</h3>
+                    <p class="text-cyan-200 mb-6 leading-relaxed font-light">
+                        <span class="text-pink-400">//</span>
+                        API completa para gestão de lavandarias, incluindo módulos de clientes, pedidos,
+                        serviços, funcionários, produtos, fornecedores, pagamentos e relatórios e um frontend para
+                        gerenciamento do sistema com Angular
                     </p>
-
-                    <div class="grid grid-cols-2 gap-4 mt-8">
-                        <div class="p-4 bg-white/5 rounded-lg">
-                            <h3 class="text-xl font-bold text-white">Angular</h3>
-                            <p class="text-gray-400 mt-2">
-                                • Components & Services
-                                • RxJS & State Management
-                                • Angular Material
-                                • TypeScript
-                                • Unit Testing (Jasmine/Karma)
-                            </p>
-                        </div>
-                        <div class="p-4 bg-white/5 rounded-lg">
-                            <h3 class="text-xl font-bold text-white">Java/Spring</h3>
-                            <p class="text-gray-400 mt-2">
-                                • APIs REST com Spring Boot
-                                • Fundamentos de Spring MVC
-                                • Persistência com JPA/Hibernate
-                                • Noções básicas de Spring Security
-                                • Testes unitários com JUnit
-                                • Versionamento com Git
-                            </p>
-                        </div>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span
+                            class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm border border-cyan-500/50">Java</span>
+                        <span
+                            class="px-4 py-2 bg-pink-500/20 text-pink-300 rounded-full text-sm border border-pink-500/50">Framework
+                            Spring</span>
+                        <span
+                            class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm border border-cyan-500/50">MySQL</span>
+                        <span
+                            class="px-4 py-2 bg-pink-500/20 text-pink-300 rounded-full text-sm border border-pink-500/50">Angular</span>
                     </div>
+                    <a href="https://github.com" target="_blank"
+                        class="inline-flex items-center text-pink-400 hover:text-white transition-all duration-300 group">
+                        <span class="text-cyan-400 group-hover:text-white">&lt;</span>
+                        Ver Projeto
+                        <span class="text-cyan-400 group-hover:text-white">/&gt;</span>
+                    </a>
+                </div>
 
-                    <div class="mt-8 p-4 bg-white/5 rounded-lg">
-                        <h3 class="text-xl font-bold text-white">Estudos em Andamento</h3>
-                        <p class="text-gray-400 mt-2">
-                            • Aprofundamento em padrões de projeto e clean code
-                            • Testes automatizados e TDD
-                            • Docker e containerização
-                            • Princípios SOLID e boas práticas
-                            • Metodologias ágeis (Scrum)
-                        </p>
+                <!-- Project 2 -->
+                <div
+                    class="tech-card p-8 rounded-lg bg-gradient-to-br from-pink-950/50 to-purple-950/50 backdrop-blur-xl border border-pink-500/20">
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400">Sistema de Gestão de Emails</h3>
+                    <p class="text-pink-200 mb-6 leading-relaxed font-light">
+                        <span class="text-cyan-400">//</span>
+                        Plataforma automatizada para gerenciamento e envio de emails em larga escala,
+                        com suporte a templates.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span
+                            class="px-4 py-2 bg-pink-500/20 text-pink-300 rounded-full text-sm border border-pink-500/50">Framework
+                            Spring</span>
+                        <span
+                            class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm border border-cyan-500/50">PostgreSQL</span>
+                        <span
+                            class="px-4 py-2 bg-pink-500/20 text-pink-300 rounded-full text-sm border border-pink-500/50">RabbitMQ</span>
+                        <span
+                            class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm border border-cyan-500/50">JUnit/Mockito</span>
                     </div>
+                    <a href="https://github.com" target="_blank"
+                        class="inline-flex items-center text-pink-400 hover:text-white transition-all duration-300 group">
+                        <span class="text-cyan-400 group-hover:text-white">&lt;</span>
+                        Ver Projeto
+                        <span class="text-cyan-400 group-hover:text-white">/&gt;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="mt-8 p-4 bg-white/5 rounded-lg">
-                        <h3 class="text-xl font-bold text-white">Soft Skills</h3>
-                        <p class="text-gray-400 mt-2">
-                            • Comunicativo e trabalho bem em equipe
-                            • Proativo e dedicado ao aprendizado contínuo
-                            • Organizado e comprometido com prazos
-                            • Boa capacidade de resolução de problemas
-                            • Aberto a feedback e novas ideias
-                        </p>
-                    </div>
-
-                    <div class="flex items-center gap-4 mt-8">
-                        <a 
-                            href="#experiencias"
-                            class="px-6 py-3 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium transition-all"
-                        >
-                            Ver experiências
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-8 px-4 md:px-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="tech-title mb-16 text-center">
+                <h2 class="text-3xl font-bold text-white">
+                    <span class="text-cyan-400">&lt;</span>
+                    Contacto
+                    <span class="text-cyan-400">/&gt;</span>
+                </h2>
+            </div>
+            <div
+                class="tech-card p-8 rounded-lg bg-gradient-to-br from-cyan-950/50 to-purple-950/50 backdrop-blur-xl border border-cyan-500/20">
+                <p class="text-cyan-200 mb-12 text-center font-light">
+                    Interessado em novos projetos e oportunidades de colaboração?
+                    <br>Vamos construir algo incrível juntos!
+                </p>
+                <div class="flex flex-col items-center gap-8">
+                    <div class="grid md:grid-cols-2 gap-6 w-full">
+                        <a href="mailto:imiliomanuel&#64;outlook.pt"
+                            class="tech-card flex items-center gap-3 p-4 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20 transition-all duration-300 group">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <span class="font-light">imiliomanuel&#64;outlook.pt</span>
                         </a>
-                        <a 
-                            href="/assets/cv.pdf"
-                            target="_blank"
-                            class="px-6 py-3 rounded-lg bg-white/5 hover:bg-white/10 text-white font-medium transition-all"
-                        >
+                        <a href="tel:+244944916156"
+                            class="tech-card flex items-center gap-3 p-4 rounded-lg bg-gradient-to-r from-pink-500/10 to-purple-500/10 border border-pink-500/20 text-pink-400 hover:bg-pink-500/20 transition-all duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span class="font-light">(+244) 944 916 156</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a href="https://wa.me/+244944916156" target="_blank"
+                            class="tech-link text-emerald-400 hover:text-white transition-all duration-300">
+                            <span class="text-cyan-400">&lt;</span>
+                            WhatsApp
+                            <span class="text-cyan-400">/&gt;</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/j.gardner" target="_blank"
+                            class="tech-link text-blue-400 hover:text-white transition-all duration-300">
+                            <span class="text-pink-400">&lt;</span>
+                            LinkedIn
+                            <span class="text-pink-400">/&gt;</span>
+                        </a>
+                        <a href="/CV - JAVA.pdf" target="_blank"
+                            class="tech-link text-cyan-400 hover:text-white transition-all duration-300">
+                            <span class="text-pink-400">[</span>
                             Download CV
+                            <span class="text-pink-400">]</span>
                         </a>
                     </div>
+                    <p class="text-gray-400 mt-4 font-light text-center">
+                        <span class="text-pink-400">$</span>
+                        Golf 2, Kilamba kiaxe, Luanda, Angola
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Seção de Projetos -->
-    <section id="projetos" class="min-h-screen py-20 px-4 md:px-20 bg-black">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-white text-center">
-                Projetos em Destaque
-            </h2>
-            <p class="text-gray-400 text-center mt-4 max-w-2xl mx-auto">
-                Conheça alguns dos principais projetos que desenvolvi utilizando diferentes tecnologias e soluções
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                <!-- Projeto 1 -->
-                <div class="bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-all">
-                    <div class="w-full h-48 flex items-center justify-center text-primary-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white">Nome do Projeto 1</h3>
-                        <p class="text-gray-400 mt-2">
-                            Descrição breve do projeto e suas principais funcionalidades e tecnologias utilizadas.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-4">
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-sm">Angular</span>
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-sm">TypeScript</span>
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-sm">TailwindCSS</span>
-                        </div>
-                        <div class="flex items-center gap-4 mt-6">
-                            <a 
-                                href="https://github.com/seu-usuario/projeto1" 
-                                target="_blank"
-                                class="flex items-center gap-2 text-[#FF9900] hover:text-white transition-all"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                Código
-                            </a>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 2 -->
-                <div class="bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-all">
-                    <div class="w-full h-48 flex items-center justify-center text-[#007396]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white">Nome do Projeto 2</h3>
-                        <p class="text-gray-400 mt-2">
-                            Descrição breve do projeto e suas principais funcionalidades e tecnologias utilizadas.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-4">
-                            <span class="px-3 text-[#007396] rounded-full text-sm">Spring Boot</span>
-                            <span class="px-3 text-[#DD0031] rounded-full text-sm">Java</span>
-                            <span class="px-3 text-[#2496ED] rounded-full text-sm">Mysql</span>
-                        </div>
-                        <div class="flex items-center gap-4 mt-6">
-                            <a 
-                                href="https://github.com/seu-usuario/projeto2" 
-                                target="_blank"
-                                class="flex items-center gap-2 text-[#FF9900] hover:text-white0 transition-all"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                Código
-                            </a>
-                           
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 3 -->
-                <div class="bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-all">
-                    <div class="w-full h-48 flex items-center justify-center text-[#2496ED]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white">Nome do Projeto 3</h3>
-                        <p class="text-gray-400 mt-2">
-                            Descrição breve do projeto e suas principais funcionalidades e tecnologias utilizadas.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-4">
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-sm">Docker</span>
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-sm">AWS</span>
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-sm">Kubernetes</span>
-                        </div>
-                        <div class="flex items-center gap-4 mt-6">
-                            <a 
-                                href="https://github.com/seu-usuario/projeto3" 
-                                target="_blank"
-                                class="flex items-center gap-2 text-[#FF9900] hover:text-white transition-all"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                Código
-                            </a>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contato -->
-    <section id="contato" class="py-20 px-4 md:px-20 bg-black">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Entre em Contato</h2>
-            <p class="text-gray-400 text-center mt-4 max-w-2xl mx-auto">
-                Estou sempre aberto a novas oportunidades e parcerias. Se você tem um projeto interessante ou apenas quer trocar uma ideia, não hesite em me contatar!
-            </p>
-
-            <div class="mt-12 flex flex-col items-center gap-6">
-                <a 
-                    href="mailto:seu-email@exemplo.com"
-                    class="flex items-center gap-3 text-[#FF9900] hover:text-white transition-all"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    imiliomanuel&#64;outlook.pt
-                </a>
-                <a 
-                    href="https://linkedin.com/in/seu-usuario"
-                    target="_blank"
-                    class="flex items-center gap-3 text-[#DD0031] hover:text-white transition-all"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    LinkedIn
-                </a>
-                <a 
-                    href="https://github.com/seu-usuario"
-                    target="_blank"
-                    class="flex items-center gap-3 text-[#2496ED] hover:text-white transition-all"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-4 md:px-20 border-t border-white/10 bg-black">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-[#2496ED] text-center md:text-left">
-                © 2024 Imilío Manuel. Todos os direitos reservados.
+    <footer class="py-8 px-4 border-t border-cyan-500/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-cyan-400 font-light">
+                <span class="text-pink-400">&copy;</span> 2024 Imílio Manuel.
+                <span class="text-pink-400">// Todos os direitos reservados</span>
             </p>
         </div>
     </footer>
